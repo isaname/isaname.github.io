@@ -1,0 +1,43 @@
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    background-color: bisque;
+}
+canvas {
+    position: absolute;
+    left: 50%;
+    top: 45%;  
+    transform: translate(-50%,-50%);
+    height: 600px;
+    width: 600px;
+}
+.title button {
+    background-color: red;
+    height: 30px;
+    width: 80px;
+    font-size: large;
+}
+
+.control {
+    position: absolute;
+    background-color: green;
+    border-radius: 20%;
+    top:90%;
+    left:50%;
+    height: 100px;
+    width: 200px;
+    translate: -50% -50%;
+    display: flex;
+    overflow: hidden;
+}
+.updown {
+    display: flex;
+    flex:2;
+    flex-direction: column;
+}
+button {
+    flex:1;
+    margin: 2px;
+}

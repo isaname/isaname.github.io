@@ -22,11 +22,11 @@ canvas {
     position: absolute;
     background-color: green;
     border-radius: 20%;
-    top:90%;
+    top:80%;
     left:50%;
     height: 100px;
     width: 200px;
-    translate: -50% -50%;
+    translate:-50%;
     display: flex;
     overflow: hidden;
 }

@@ -1,11 +1,11 @@
 let canvas = document.getElementsByTagName("canvas");
 let pen = canvas[0].getContext("2d");
-canvas[0].width=600;
-canvas[0].height=600;
+canvas[0].width=400;
+canvas[0].height=400;
 let _snake = [];
 let _food = {
-    x: parseInt(Math.random()*30),
-    y: parseInt(Math.random()*30)
+    x: parseInt(Math.random()*20),
+    y: parseInt(Math.random()*20)
 };
 let direciton = {
     x: 1,
@@ -54,8 +54,8 @@ const begin = () => {
 
 const draw = () => {
     pen.fillStyle="yellow";
-    for(let i = 0; i < 30; i++) {
-        for(let j = 0; j<30; j++){
+    for(let i = 0; i < 20; i++) {
+        for(let j = 0; j<20; j++){
             pen.fillRect(j*20,i*20,18,18);
         }
     }
@@ -74,9 +74,9 @@ const move = () => {
     let newPostion = {}
     switch(_snake[0].x+direciton.x){
         case -1:
-            newPostion.x=29;
+            newPostion.x=19;
             break;
-        case 30:
+        case 20:
             newPostion.x=0;
             break;
         default:
@@ -84,9 +84,9 @@ const move = () => {
     }
     switch(_snake[0].y+direciton.y){
         case -1:
-            newPostion.y=29;
+            newPostion.y=19;
             break;
-        case 30:
+        case 20:
             newPostion.y=0;
             break;
         default:
@@ -98,8 +98,8 @@ const move = () => {
     });
     if (_snake[0].x==_food.x && _snake[0].y == _food.y) {
         _food = {
-            x: parseInt(Math.random()*30),
-            y: parseInt(Math.random()*30)
+            x: parseInt(Math.random()*20),
+            y: parseInt(Math.random()*20)
         };
         _snake.push({});
     }
